@@ -24,6 +24,10 @@
 		cursor: pointer;
 		transition: 0.3s;
 
+		@media (max-width: 700px) {
+			cursor: default;
+		}
+
 		&:hover {
 			border: 2px solid #7a7a86;
 		}
