@@ -1,0 +1,65 @@
+.switch__theme__daefeef {
+	.dark_mode {
+		max-height: 30px;
+	}
+
+	.dark_mode_label {
+		position: relative;
+		top: -20px;
+
+		width: 65px;
+		height: 30px;
+		position: relative;
+		display: block;
+		background: #f6f6f7;
+		border: 2px solid #c0c0c2;
+
+		border-radius: 200px;
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+			border: 2px solid #7a7a86;
+		}
+
+		&::after {
+			content: "";
+			width: 25px;
+			height: 25px;
+			position: absolute;
+			top: 50%;
+			left: 1px;
+			transform: translateY(-50%);
+			background: url(./icons/sun.svg) no-repeat;
+			background-color: white;
+			border-radius: 180px;
+			transition: 0.2s;
+		}
+
+		&:active:after {
+			width: 30px;
+		}
+	}
+
+	.dark_mode_input {
+		width: 0;
+		height: 0;
+		visibility: hidden;
+
+		&:checked + .dark_mode_label {
+			background: #313136;
+			border: 2px solid #48484d;
+
+			&:hover {
+				border: 2px solid #94949b;
+			}
+		}
+
+		&:checked + .dark_mode_label:after {
+			left: 60px;
+			transform: translate(-100%, -50%);
+			background: url(./icons/moon.svg) no-repeat;
+			background-color: #000;
+		}
+	}
+}
