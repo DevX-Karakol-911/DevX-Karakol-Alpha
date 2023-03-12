@@ -46,6 +46,7 @@
 			transform: translateY(-50%);
 			background: url(./icons/sun.svg) no-repeat center/cover;
 			background-color: white;
+			border: 2px solid transparent;
 			border-radius: 100px;
 			transition: 0.2s;
 		}
@@ -80,6 +81,7 @@
 			transform: translate(-100%, -50%);
 			background: url(./icons/moon.svg) no-repeat center/cover;
 			background-color: #000;
+			border: 2px solid transparent;
 		}
 	}
 }
