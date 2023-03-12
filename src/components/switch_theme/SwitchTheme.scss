@@ -1,20 +1,26 @@
 .switch__theme__daefeef {
+	position: relative;
 	.dark_mode {
-		max-height: 30px;
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		max-width: 43px;
+		max-height: 23px;
 	}
 
 	.dark_mode_label {
 		position: relative;
-		top: -20px;
+		top: -18px;
 
-		width: 65px;
-		height: 30px;
+		width: 43px;
+		height: 23px;
 		position: relative;
 		display: block;
 		background: #f6f6f7;
 		border: 2px solid #c0c0c2;
 
-		border-radius: 200px;
+		border-radius: 100px;
 		cursor: pointer;
 		transition: 0.3s;
 
@@ -24,20 +30,20 @@
 
 		&::after {
 			content: "";
-			width: 25px;
-			height: 25px;
+			width: 18px;
+			height: 18px;
 			position: absolute;
 			top: 50%;
 			left: 1px;
 			transform: translateY(-50%);
-			background: url(./icons/sun.svg) no-repeat;
+			background: url(./icons/sun.svg) no-repeat center/cover;
 			background-color: white;
-			border-radius: 180px;
+			border-radius: 100px;
 			transition: 0.2s;
 		}
 
 		&:active:after {
-			width: 30px;
+			width: 18px;
 		}
 	}
 
@@ -56,9 +62,9 @@
 		}
 
 		&:checked + .dark_mode_label:after {
-			left: 60px;
+			left: 38px;
 			transform: translate(-100%, -50%);
-			background: url(./icons/moon.svg) no-repeat;
+			background: url(./icons/moon.svg) no-repeat center/cover;
 			background-color: #000;
 		}
 	}
