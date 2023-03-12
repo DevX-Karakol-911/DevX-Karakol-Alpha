@@ -5,7 +5,7 @@ import { Wrapper } from "./components/wrapper/Wrapper";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "./components/auth/ProtectedRoute";
 import { AuthProvider } from "./provider/AuthProvider";
-import { Layout } from "./components/Layout"; 
+import { Layout } from "./components/Layout";
 import { ThemeProvider } from "./provider/ThemeProvider";
 
 import "./App.scss";
