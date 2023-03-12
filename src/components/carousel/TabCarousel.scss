@@ -1,0 +1,336 @@
+:root {
+	// todo light
+	--carousel-bg-button-light: #ffffff;
+	--carousel-inside-bg-button-light: #f4f4f4;
+	--carousel-text-light: #000000;
+	--carousel-box-shadow-light: rgba(0, 0, 0, 0.18);
+
+	// todo dark
+	--carousel-bg-button-dark: #313131;
+	--carousel-inside-bg-button-dark: #424242;
+	--carousel-text-dark: #ffffff;
+	--carousel-box-shadow-dark: rgba(0, 0, 0, 0.9);
+}
+
+.layout {
+	overflow: hidden;
+
+	.tab__carousel__awfehsrt {
+		.carousel {
+			.tabs {
+				.button {
+					background: var(--carousel-bg-button-light);
+					color: var(--carousel-text-light);
+
+					&.active {
+						box-shadow: 0px 10px 30px var(--carousel-box-shadow-light);
+					}
+
+					.company {
+						&::after {
+							background: var(--carousel-inside-bg-button-light);
+						}
+					}
+
+					.role {
+						&::after {
+							background: var(--carousel-inside-bg-button-light);
+						}
+					}
+				}
+			}
+
+			.base_people {
+				.person__company {
+					color: var(--carousel-text-light);
+				}
+
+				// ? line
+				&::after {
+					background: url(./img/people/line.svg) no-repeat center/cover;
+				}
+			}
+		}
+	}
+}
+
+.layout.dark {
+	.tab__carousel__awfehsrt {
+		.carousel {
+			.tabs {
+				.button {
+					background: var(--carousel-bg-button-dark);
+					color: var(--carousel-text-dark);
+
+					&.active {
+						box-shadow: 0px 10px 30px var(--carousel-box-shadow-dark);
+					}
+
+					.company {
+						&::after {
+							background: var(--carousel-inside-bg-button-dark);
+						}
+					}
+
+					.role {
+						&::after {
+							background: var(--carousel-inside-bg-button-dark);
+						}
+					}
+				}
+			}
+
+			.base_people {
+				.person__company {
+					color: var(--carousel-text-dark);
+				}
+
+				// ? line
+				&::after {
+					background: url(./img/people/line-dark.svg) no-repeat center/cover;
+				}
+			}
+		}
+	}
+}
+
+.tab__carousel__awfehsrt {
+	position: relative;
+
+	width: 625px;
+	height: 450px;
+
+	.position {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.carousel {
+		position: relative;
+
+		width: 625px;
+		height: 450px;
+
+		.tabs {
+			.button {
+				padding: 12px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				position: relative;
+
+				width: 140px;
+				border-radius: 10px;
+
+				cursor: pointer;
+				transition: 0.4s;
+
+				@media (max-width: 700px) {
+					cursor: default;
+				}
+
+				.company {
+					position: relative;
+
+					display: flex;
+					align-items: center;
+
+					img {
+						position: relative;
+						left: 2px;
+						height: 18px;
+					}
+
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						background: #f4f4f4;
+						border-radius: 6px;
+						width: 65px;
+						height: 19px;
+					}
+					&.active::after {
+						opacity: 0;
+					}
+				}
+
+				.role {
+					position: relative;
+
+					margin-top: 7px;
+
+					p {
+						position: relative;
+						left: 2px;
+
+						font-size: 12px;
+						font-weight: 500;
+					}
+
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+
+						background: #f4f4f4;
+						border-radius: 6px;
+						width: 115px;
+						height: 16px;
+					}
+					&.active::after {
+						opacity: 0;
+					}
+				}
+
+				&:nth-child(1) {
+					position: absolute;
+					left: 380px;
+					top: 320px;
+
+					&.active {
+						transform: translate(5px, 10px) scale(1.1);
+					}
+				}
+
+				&:nth-child(2) {
+					position: absolute;
+					left: 135px;
+					top: 335px;
+
+					&.active {
+						transform: translate(-25px, 10px) scale(1.1);
+					}
+				}
+
+				&:nth-child(3) {
+					position: absolute;
+					left: 40px;
+					top: 210px;
+
+					&.active {
+						transform: translate(-30px, 0px) scale(1.1);
+					}
+				}
+
+				&:nth-child(4) {
+					position: absolute;
+					left: 130px;
+					top: 70px;
+
+					&.active {
+						transform: translate(-10px, -20px) scale(1.1);
+					}
+				}
+
+				&:nth-child(5) {
+					position: absolute;
+					left: 460px;
+					top: 185px;
+
+					&.active {
+						transform: translate(20px, -10px) scale(1.1);
+					}
+				}
+			}
+		}
+
+		.base_people {
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 1s;
+
+			&.active {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			&.animate-out {
+				opacity: 0;
+				visibility: hidden;
+				animation: hideBasePeople 0.7s forwards;
+			}
+
+			&.animate-in {
+				opacity: 0;
+				visibility: visible;
+				animation: showBasePeople 0.7s forwards;
+			}
+
+			@keyframes hideBasePeople {
+				0% {
+					opacity: 1;
+					visibility: visible;
+				}
+				100% {
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+
+			@keyframes showBasePeople {
+				0% {
+					opacity: 0;
+					visibility: visible;
+				}
+				100% {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			.person__company {
+				position: absolute;
+				left: 409px;
+				top: 96px;
+
+				font-weight: 600;
+			}
+
+			// ? line
+			&::after {
+				content: "";
+				position: absolute;
+				left: 337px;
+				top: 99px;
+
+				// background: url(./img/people/line.svg) no-repeat center/cover;
+				width: 70px;
+				height: 45px;
+			}
+
+			.person__img {
+				position: absolute;
+				left: 235px;
+				top: 145px;
+
+				border-radius: 10px;
+				width: 160px;
+				height: 160px;
+			}
+		}
+
+		@media (max-width: 650px) {
+			transform: scale(0.8);
+		}
+		@media (max-width: 525px) {
+			transform: scale(0.7);
+		}
+		@media (max-width: 455px) {
+			transform: scale(0.6);
+		}
+		@media (max-width: 390px) {
+			transform: scale(0.59);
+		}
+		@media (max-width: 370px) {
+			transform: scale(0.56);
+		}
+	}
+}

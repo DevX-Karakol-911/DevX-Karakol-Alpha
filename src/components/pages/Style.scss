@@ -1,0 +1,65 @@
+// ! Home
+.home {
+	padding: 0 1rem 0 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+
+	.content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width: 1115px) {
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.title {
+			h1 {
+				font-weight: 800;
+				line-height: 1.2;
+			}
+		}
+
+		.carousel {
+			position: relative;
+
+			@media (max-width: 500px) {
+				top: -25px;
+			}
+			@media (max-width: 450px) {
+				top: -30px;
+			}
+			@media (max-width: 400px) {
+				top: -35px;
+			}
+		}
+	}
+}
+
+// ! About
+.about {
+	.content {
+		p {
+			margin: 20px 0;
+		}
+	}
+}
+
+// ! contact
+.contact {
+	.content {
+	}
+}
+
+// ! projects
+.projects {
+	.content {
+		p {
+			margin: 20px 0;
+		}
+	}
+}
