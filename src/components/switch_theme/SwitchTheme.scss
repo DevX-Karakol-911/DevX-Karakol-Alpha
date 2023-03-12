@@ -24,12 +24,16 @@
 		cursor: pointer;
 		transition: 0.3s;
 
-		@media (max-width: 700px) {
-			cursor: default;
-		}
-
 		&:hover {
 			border: 2px solid #7a7a86;
+		}
+
+		@media (max-width: 700px) {
+			cursor: default;
+
+			&:hover {
+				border: 2px solid #c0c0c2;
+			}
 		}
 
 		&::after {
@@ -62,6 +66,12 @@
 
 			&:hover {
 				border: 2px solid #94949b;
+			}
+
+			@media (max-width: 700px) {
+				&:hover {
+					border: 2px solid #48484d;
+				}
 			}
 		}
 
