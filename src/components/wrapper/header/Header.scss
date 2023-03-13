@@ -7,13 +7,13 @@
 	z-index: 9999;
 
 	.headerScroll {
-		padding: 15px 0;
+		padding: 20px 0;
 
-		// transition: background 0.4s, padding 0.5s;
+		transition: padding 0.5s;
 	}
 
 	.headerScroll.active {
-		padding: 15px 0;
+		padding: 14px 0;
 
 		backdrop-filter: blur(4px);
 		-webkit-backdrop-filter: blur(4px);
