@@ -7,15 +7,14 @@
 	z-index: 9999;
 
 	.headerScroll {
-		padding: 20px 0;
+		padding: 15px 0;
 
-		transition: background 0.4s, padding 0.5s;
+		// transition: background 0.4s, padding 0.5s;
 	}
 
 	.headerScroll.active {
 		padding: 15px 0;
 
-		box-shadow: 0px 0px 5px #000000de;
 		backdrop-filter: blur(4px);
 		-webkit-backdrop-filter: blur(4px);
 	}
@@ -196,13 +195,11 @@
 			display: block;
 			transform: scale(0.5);
 
-			$background-line-color: #fff;
 			.burger__icon {
 				width: 60px;
 				height: 45px;
 				position: relative;
 				transition-duration: 1s;
-				// margin: 20px auto 20px auto;
 				cursor: pointer;
 
 				@media (max-width: 700px) {
@@ -213,7 +210,6 @@
 					top: 19px;
 					height: 7px;
 					width: 60px;
-					background-color: $background-line-color;
 					border-radius: 20px;
 					position: absolute;
 					transition-duration: 0.15s;
@@ -224,7 +220,6 @@
 						top: -18px;
 						height: 7px;
 						width: 60px;
-						background-color: $background-line-color;
 						content: "";
 						border-radius: 20px;
 						transition-duration: 0.15s;
@@ -236,7 +231,6 @@
 						top: 18px;
 						height: 7px;
 						width: 60px;
-						background-color: $background-line-color;
 						content: "";
 						border-radius: 20px;
 						transition-duration: 0.15s;
@@ -248,7 +242,6 @@
 				span {
 					transition-duration: 0.1s;
 					transition-delay: 0.15s;
-					background: transparent;
 					&:before {
 						transition: top 0.15s, transform 0.15s 0.15s;
 						top: 0px;

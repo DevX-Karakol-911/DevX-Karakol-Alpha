@@ -21,7 +21,7 @@ export const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const changeBackground = () => {
-		if (window.scrollY >= 20) {
+		if (window.scrollY >= 10) {
 			setHeaderScroll(true);
 		} else {
 			setHeaderScroll(false);

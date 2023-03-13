@@ -14,14 +14,16 @@ body {
 :root {
 	// todo light
 	// ! wrapper
-	--wrapper-bg-all-light: #FFFFFF;
+	--wrapper-bg-all-light: #ffffff;
 
 	// ! header
 	--header-scroll-light: #ffffff00;
-	--header-ActScroll-light: #FFFFFF;
+	--header-ActScroll-light: #ffffffa1;
+	--header-box-shadow-light: #a1a1a1;
 	--header-text-light: #494950;
 	--header-ActText-light: #646cff;
 	--header-border-light: rgba(255, 255, 255, 0.151);
+	--header-burger-button-light: #797979;
 	--header-burger-menu-light: #0f1a25;
 	--header-switch-bg-light: #f6f6f7;
 	--header-switch-text-light: #737379;
@@ -39,14 +41,16 @@ body {
 
 	// todo dark
 	// ! wrapper
-	--wrapper-bg-all-dark: #1E1E20;
+	--wrapper-bg-all-dark: #1e1e20;
 
 	// ! header
 	--header-scroll-dark: #0c131b00;
-	--header-ActScroll-dark: #1E1E20;
+	--header-ActScroll-dark: #1e1e20a1;
+	--header-box-shadow-dark: #5e5e5e;
 	--header-text-dark: #f8f8ef;
 	--header-ActText-dark: #9499ff;
 	--header-border-dark: rgba(255, 255, 255, 0.151);
+	--header-burger-button-dark: #fff;
 	--header-burger-menu-dark: #1a2337;
 	--header-switch-bg-dark: #252529;
 	--header-switch-text-dark: #9c9ca3;
@@ -77,6 +81,7 @@ body {
 		}
 		.headerScroll.active {
 			background: var(--header-ActScroll-light);
+			box-shadow: 0px 0px 5px var(--header-box-shadow-light);
 		}
 
 		// ? nav
@@ -118,6 +123,26 @@ body {
 					background: var(--header-switch-bg-light);
 
 					color: var(--header-switch-text-light);
+				}
+			}
+		}
+
+		// ? burger button
+		.burger__button {
+			.burger__icon {
+				span {
+					background-color: var(--header-burger-button-light);
+					&:before {
+						background-color: var(--header-burger-button-light);
+					}
+					&:after {
+						background-color: var(--header-burger-button-light);
+					}
+				}
+			}
+			.burger__icon.open {
+				span {
+					background: transparent;
 				}
 			}
 		}
@@ -184,6 +209,7 @@ body {
 		}
 		.headerScroll.active {
 			background: var(--header-ActScroll-dark);
+			box-shadow: 0px 0px 5px var(--header-box-shadow-dark);
 		}
 
 		// ? nav
@@ -225,6 +251,26 @@ body {
 					background: var(--header-switch-bg-dark);
 
 					color: var(--header-switch-text-dark);
+				}
+			}
+		}
+
+		// ? burger button
+		.burger__button {
+			.burger__icon {
+				span {
+					background-color: var(--header-burger-button-dark);
+					&:before {
+						background-color: var(--header-burger-button-dark);
+					}
+					&:after {
+						background-color: var(--header-burger-button-dark);
+					}
+				}
+			}
+			.burger__icon.open {
+				span {
+					background: transparent;
 				}
 			}
 		}
