@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../../../hook/useTheme";
 import { Logout } from "../../auth/Logout";
+import { SwitchTheme } from "../../switch_theme/SwitchTheme";
 import "./Header.scss";
 
-import pic from "../../../assets/logo.png";
-import sun from "../../../assets/icons/sun.svg";
-import moon from "../../../assets/icons/moon.svg";
-import { SwitchTheme } from "../../switch_theme/SwitchTheme";
+import logo from "../../../assets/logo.png";
+import logoDark from "../../../assets/logo-dark.png";
 
 const links = [
 	{ to: "/", text: "Home" },
@@ -39,7 +38,11 @@ export const Header = () => {
 							{/* ! header menu */}
 							<div className="logo">
 								<a href="">
-									<img src={pic} alt="DevX logo" />
+									{isDark ? (
+										<img src={logo} alt="DevX logo" />
+									) : (
+										<img src={logoDark} alt="DevX logo" />
+									)}
 								</a>
 							</div>
 							<div className="nav__menu">
@@ -58,15 +61,6 @@ export const Header = () => {
 									</div>
 								</div>
 								<div className="right">
-									{/* <div
-										className="switch__theme"
-										onClick={() => setIsDark(!isDark)}>
-										{isDark ? (
-											<img src={sun} alt="sun" />
-										) : (
-											<img src={moon} alt="moon" />
-										)}
-									</div> */}
 									<div className="switch__theme">
 										<SwitchTheme />
 									</div>

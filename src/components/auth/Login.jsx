@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import pic from "../../assets/logo.png";
 import google_icon from "../../assets/icons/google_icon.svg";
-import scss from "./Auth.module.scss";
+import "./Auth.scss";
 
 export const Login = () => {
 	const { googleSignIn, user } = UserAuth();
@@ -28,17 +28,17 @@ export const Login = () => {
 	}, [user, navigate]);
 
 	return (
-		<div className={scss.login}>
-			<div className={scss.style}>
-				<img className={scss.logo} src={pic} alt="DevX Logo" />
+		<div className="login__desfaer">
+			<div className="style">
+				<img className="logo" src={pic} alt="DevX Logo" />
 				<h1>
 					Welcome <span>back</span>
 				</h1>
-				<div className={scss.submit} onClick={handleGoogleSignIn}>
+				<div className="submit" onClick={handleGoogleSignIn}>
 					<img src={google_icon} alt="" />
 					<p>Log in with Google</p>
 				</div>
-				<p className={scss.documentation}>
+				<p className="documentation">
 					By signing up, you agree to our{" "}
 					<a href="#" target="_blank">
 						Privacy Policy
@@ -50,7 +50,7 @@ export const Login = () => {
 					</a>
 					.
 				</p>
-				<p className={scss.switch}>
+				<p className="switch">
 					Do not have an account? <Link to="/register">Register</Link>
 				</p>
 			</div>

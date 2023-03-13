@@ -15,7 +15,7 @@
 	.headerScroll.active {
 		padding: 15px 0;
 
-		box-shadow: 0px 0px 5px #0c131bde;
+		box-shadow: 0px 0px 5px #000000de;
 		backdrop-filter: blur(4px);
 		-webkit-backdrop-filter: blur(4px);
 	}
@@ -57,11 +57,9 @@
 
 		display: flex;
 		align-items: center;
+
 		a {
-			margin: 0 10px;
-			padding: 7px 12px;
-			border-radius: 7px;
-			border: 1px solid transparent;
+			padding: 10px 12px;
 
 			font-weight: 500;
 			text-decoration: none;
