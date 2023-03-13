@@ -147,7 +147,7 @@ export const Header = () => {
 														to={subRoute.to}
 														onClick={() => {
 															setIsOpen(false);
-															setIsOpenDropdown(true);
+															// setIsOpenDropdown(true);
 														}}
 														className={({ isActive }) =>
 															isActive ? "activeHeaderStyle" : undefined
