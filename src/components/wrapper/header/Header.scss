@@ -170,7 +170,7 @@
 		border-radius: 10px;
 		max-width: 370px;
 		width: 100%;
-		padding: 20px 20px 10px 20px;
+		padding: 20px 20px 20px 20px;
 
 		transition: 0.165s;
 
@@ -192,7 +192,7 @@
 
 		.burger__menu__switch__theme {
 			position: relative;
-			margin: 5px 0;
+			margin: 15px 0 15px 0;
 			width: 100%;
 
 			cursor: default;
@@ -223,7 +223,7 @@
 		}
 
 		.right {
-			margin: 7px 0;
+			// margin: 7px 0;
 		}
 	}
 }
