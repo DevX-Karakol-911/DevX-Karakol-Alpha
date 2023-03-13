@@ -139,15 +139,15 @@ export const Header = () => {
 													isOpenDropdown
 														? "dropdown__content open"
 														: "dropdown__content"
-												}
-												onClick={() => setIsOpenDropdown(!isOpenDropdown)}>
+												}>
 												{link.subRoutes.map((subRoute) => (
 													<NavLink
 														key={subRoute.to}
 														to={subRoute.to}
-														onClick={() => {
+														onClick={(event) => {
+															event.stopPropagation();
 															setIsOpen(false);
-															// setIsOpenDropdown(true);
+															setIsOpenDropdown(true);
 														}}
 														className={({ isActive }) =>
 															isActive ? "activeHeaderStyle" : undefined
@@ -161,7 +161,10 @@ export const Header = () => {
 										<NavLink
 											key={link.to}
 											to={link.to}
-											onClick={() => setIsOpen(false)}
+											onClick={() => {
+												setIsOpen(false);
+												setIsOpenDropdown(false);
+											}}
 											className={({ isActive }) =>
 												isActive ? "activeHeaderStyle" : undefined
 											}>
