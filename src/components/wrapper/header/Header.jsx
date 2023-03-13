@@ -27,6 +27,7 @@ export const Header = () => {
 	const { isDark, setIsDark } = useTheme();
 	const [headerScroll, setHeaderScroll] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
+	const [isOpenDropdown, setIsOpenDropdown] = useState(false);
 
 	const changeBackground = () => {
 		if (window.scrollY >= 10) {
@@ -114,17 +115,55 @@ export const Header = () => {
 								className={
 									isOpen ? "nav__burger__menu show" : "nav__burger__menu"
 								}>
-								{links.map((link) => (
-									<NavLink
-										key={link.to}
-										to={link.to}
-										onClick={() => setIsOpen(false)}
-										className={({ isActive }) =>
-											isActive ? "activeHeaderStyle" : undefined
-										}>
-										{link.text}
-									</NavLink>
-								))}
+								{links.map((link) =>
+									link.subRoutes ? (
+										<div
+											className={isOpenDropdown ? "dropdown open" : "dropdown"}
+											key={link.to}
+											onClick={() => setIsOpenDropdown(!isOpenDropdown)}>
+											<span>
+												<pre>{link.text}</pre>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													aria-hidden="true"
+													focusable="false"
+													viewBox="0 0 24 24"
+													class="button__icon"
+													data-v-3a85cb39="">
+													<path d="M18.9,10.9h-6v-6c0-0.6-0.4-1-1-1s-1,0.4-1,1v6h-6c-0.6,0-1,0.4-1,1s0.4,1,1,1h6v6c0,0.6,0.4,1,1,1s1-0.4,1-1v-6h6c0.6,0,1-0.4,1-1S19.5,10.9,18.9,10.9z"></path>
+												</svg>
+											</span>
+
+											<div
+												className={
+													isOpenDropdown
+														? "dropdown__content open"
+														: "dropdown__content"
+												}
+												onClick={() => setIsOpenDropdown(!isOpenDropdown)}>
+												{link.subRoutes.map((subRoute) => (
+													<NavLink
+														key={subRoute.to}
+														to={subRoute.to}
+														className={({ isActive }) =>
+															isActive ? "activeHeaderStyle" : undefined
+														}>
+														<pre>{subRoute.text}</pre>
+													</NavLink>
+												))}
+											</div>
+										</div>
+									) : (
+										<NavLink
+											key={link.to}
+											to={link.to}
+											className={({ isActive }) =>
+												isActive ? "activeHeaderStyle" : undefined
+											}>
+											{link.text}
+										</NavLink>
+									)
+								)}
 								<div className="burger__menu__switch__theme">
 									<div
 										className="button__switch__theme"
