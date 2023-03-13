@@ -1,6 +1,6 @@
 :root {
 	// todo light
-	--carousel-bg-button-light: #f7f7f7;
+	--carousel-bg-button-light: #FFFFFF;
 	--carousel-inside-bg-button-light: #ebebeb;
 	--carousel-text-light: #000000;
 	--carousel-box-shadow-light: rgba(0, 0, 0, 0.18);
@@ -20,6 +20,7 @@
 			.tabs {
 				.button {
 					background: var(--carousel-bg-button-light);
+					box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 					color: var(--carousel-text-light);
 
 					&.active {
@@ -60,6 +61,7 @@
 			.tabs {
 				.button {
 					background: var(--carousel-bg-button-dark);
+					box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 					color: var(--carousel-text-dark);
 
 					&.active {
