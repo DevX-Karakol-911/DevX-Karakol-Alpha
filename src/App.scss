@@ -24,7 +24,8 @@ body {
 	--header-ActText-light: #646cff;
 	--header-border-light: rgba(255, 255, 255, 0.151);
 	--header-burger-button-light: #797979;
-	--header-burger-menu-light: #FFFFFF;
+	--header-burger-menu-light: #ffffff;
+	--header-burger-line-light: #00000021;
 	--header-switch-bg-light: #f6f6f7;
 	--header-switch-text-light: #737379;
 
@@ -51,7 +52,8 @@ body {
 	--header-ActText-dark: #9499ff;
 	--header-border-dark: rgba(255, 255, 255, 0.151);
 	--header-burger-button-dark: #fff;
-	--header-burger-menu-dark: #1E1E20;
+	--header-burger-menu-dark: #1e1e20;
+	--header-burger-line-dark: #ffffff21;
 	--header-switch-bg-dark: #252529;
 	--header-switch-text-dark: #9c9ca3;
 
@@ -104,17 +106,18 @@ body {
 			border: 1px solid var(--header-border-light);
 
 			a {
+				border-bottom: 1px solid var(--header-burger-line-light);
 				color: var(--header-text-light);
 
 				&:hover {
-					background: var(--header-button-light);
+					color: var(--header-ActText-light);
 				}
 			}
 			.activeHeaderStyle {
-				background: var(--header-ActButton-light);
+				color: var(--header-ActText-light);
 
 				&:hover {
-					background: var(--header-ActButton-light);
+					color: var(--header-ActText-light);
 				}
 			}
 
@@ -232,17 +235,18 @@ body {
 			border: 1px solid var(--header-border-dark);
 
 			a {
+				border-bottom: 1px solid var(--header-burger-line-dark);
 				color: var(--header-text-dark);
 
 				&:hover {
-					background: var(--header-button-dark);
+					color: var(--header-ActText-dark);
 				}
 			}
 			.activeHeaderStyle {
-				background: var(--header-ActButton-dark);
+				color: var(--header-ActText-dark);
 
 				&:hover {
-					background: var(--header-ActButton-dark);
+					color: var(--header-ActText-dark);
 				}
 			}
 
