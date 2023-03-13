@@ -9,10 +9,10 @@ import logo from "../../../assets/logo.png";
 import logoDark from "../../../assets/logo-dark.png";
 
 const links = [
-	{ to: "/", text: "Home" },
+	// { to: "/", text: "Home" },
 	{ to: "/about", text: "About Us" },
-	{ to: "/contact", text: "Contacts" },
 	{ to: "/projects", text: "Projects" },
+	{ to: "/contact", text: "Contacts" },
 ];
 
 export const Header = () => {
@@ -37,13 +37,13 @@ export const Header = () => {
 						<div className="content">
 							{/* ! header menu */}
 							<div className="logo">
-								<a href="">
+								<NavLink to="/">
 									{isDark ? (
 										<img src={logo} alt="DevX logo" />
 									) : (
 										<img src={logoDark} alt="DevX logo" />
 									)}
-								</a>
+								</NavLink>
 							</div>
 							<div className="nav__menu">
 								<div className="left">
