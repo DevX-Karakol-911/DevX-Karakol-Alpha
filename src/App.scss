@@ -119,7 +119,7 @@ body {
 				.dropdown__content {
 					background: var(--header-dropdown-content-bg-light);
 					a:hover {
-						background: var(--header-HoverDropdown-content-bg-light);
+						background: var(--header-HoverDropdown-content-button-light);
 					}
 				}
 			}
@@ -267,7 +267,7 @@ body {
 				.dropdown__content {
 					background: var(--header-dropdown-content-bg-dark);
 					a:hover {
-						background: var(--header-HoverDropdown-content-bg-dark);
+						background: var(--header-HoverDropdown-content-button-dark);
 					}
 				}
 			}
