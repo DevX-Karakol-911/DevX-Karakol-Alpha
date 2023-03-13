@@ -24,6 +24,8 @@ body {
 	--header-ActButton-light: rgb(107, 99, 255);
 	--header-border-light: rgba(255, 255, 255, 0.151);
 	--header-burger-menu-light: #0f1a25;
+	--header-switch-bg-light: #F6F6F7;
+	--header-switch-text-light: #737379;
 
 	// ! main
 	--main-text-light: #0f1a25;
@@ -48,6 +50,8 @@ body {
 	--header-ActButton-dark: #6b63ff;
 	--header-border-dark: rgba(255, 255, 255, 0.151);
 	--header-burger-menu-dark: #1a2337;
+	--header-switch-bg-dark: #252529;
+	--header-switch-text-dark: #9c9ca3;
 
 	// ! main
 	--main-text-dark: #ffffff;
@@ -112,6 +116,14 @@ body {
 
 				&:hover {
 					background: var(--header-ActButton-light);
+				}
+			}
+
+			.burger__menu__switch__theme {
+				.button__switch__theme {
+					background: var(--header-switch-bg-light);
+
+					color: var(--header-switch-text-light);
 				}
 			}
 		}
@@ -215,6 +227,14 @@ body {
 
 				&:hover {
 					background: var(--header-ActButton-dark);
+				}
+			}
+
+			.burger__menu__switch__theme {
+				.button__switch__theme {
+					background: var(--header-switch-bg-dark);
+
+					color: var(--header-switch-text-dark);
 				}
 			}
 		}

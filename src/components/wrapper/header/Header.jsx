@@ -7,6 +7,7 @@ import "./Header.scss";
 import pic from "../../../assets/logo.png";
 import sun from "../../../assets/icons/sun.svg";
 import moon from "../../../assets/icons/moon.svg";
+import { SwitchTheme } from "../../switch_theme/SwitchTheme";
 
 const links = [
 	{ to: "/", text: "Home" },
@@ -57,7 +58,7 @@ export const Header = () => {
 									</div>
 								</div>
 								<div className="right">
-									<div
+									{/* <div
 										className="switch__theme"
 										onClick={() => setIsDark(!isDark)}>
 										{isDark ? (
@@ -65,6 +66,9 @@ export const Header = () => {
 										) : (
 											<img src={moon} alt="moon" />
 										)}
+									</div> */}
+									<div className="switch__theme">
+										<SwitchTheme />
 									</div>
 									<Logout />
 								</div>
@@ -86,23 +90,18 @@ export const Header = () => {
 										{link.text}
 									</NavLink>
 								))}
-								<NavLink
-									className="burger__menu__switch__theme"
-									onClick={() => {
-										setIsDark(!isDark);
-										setIsOpen(false);
-									}}>
+								<div className="burger__menu__switch__theme">
 									<div
-										className="switch__theme"
-										onClick={() => setIsDark(!isDark)}>
-										{isDark ? (
-											<img src={sun} alt="sun" />
-										) : (
-											<img src={moon} alt="moon" />
-										)}
+										className="button__switch__theme"
+										onClick={() => {
+											setIsDark(!isDark);
+										}}>
+										Appearance
 									</div>
-									Switch Theme
-								</NavLink>
+									<div className="icon__switch__theme">
+										<SwitchTheme />
+									</div>
+								</div>
 								<div className="right">
 									<Logout />
 								</div>
