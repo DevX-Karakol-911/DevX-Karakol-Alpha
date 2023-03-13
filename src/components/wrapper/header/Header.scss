@@ -106,12 +106,9 @@
 
 				cursor: default;
 
-				a{
-					cursor: pointer;
-				}
-
-				a:hover {
+				a {
 					border-radius: 10px;
+					cursor: pointer;
 				}
 			}
 			&:hover .dropdown__content {
