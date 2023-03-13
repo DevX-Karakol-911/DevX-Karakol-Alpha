@@ -145,7 +145,10 @@ export const Header = () => {
 													<NavLink
 														key={subRoute.to}
 														to={subRoute.to}
-														onClick={() => setIsOpen(false)}
+														onClick={() => {
+															setIsOpen(false);
+															setIsOpenDropdown(true);
+														}}
 														className={({ isActive }) =>
 															isActive ? "activeHeaderStyle" : undefined
 														}>
