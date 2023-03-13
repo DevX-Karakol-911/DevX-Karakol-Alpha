@@ -11,7 +11,15 @@ import logoDark from "../../../assets/logo-dark.png";
 const links = [
 	// { to: "/", text: "Home" },
 	{ to: "/about", text: "About Us" },
-	{ to: "/projects", text: "Projects" },
+	{
+		to: "/projects",
+		text: "Projects",
+		subRoutes: [
+			{ to: "/projects/fullstack", text: "Full Stack" },
+			{ to: "/projects/sdet", text: "SDET" },
+			{ to: "/projects/uiux", text: "UI & UX" },
+		],
+	},
 	{ to: "/contact", text: "Contacts" },
 ];
 
@@ -52,16 +60,45 @@ export const Header = () => {
 							<div className="nav__menu">
 								<div className="left">
 									<div className="link">
-										{links.map((link) => (
-											<NavLink
-												key={link.to}
-												to={link.to}
-												className={({ isActive }) =>
-													isActive ? "activeHeaderStyle" : undefined
-												}>
-												{link.text}
-											</NavLink>
-										))}
+										{links.map((link) =>
+											link.subRoutes ? (
+												<div className="dropdown" key={link.to}>
+													<span>
+														<pre>{link.text}</pre>
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															aria-hidden="true"
+															focusable="false"
+															viewBox="0 0 24 24"
+															className="arrow__icon">
+															<path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" />
+														</svg>
+													</span>
+
+													<div className="dropdown__content">
+														{link.subRoutes.map((subRoute) => (
+															<NavLink
+																key={subRoute.to}
+																to={subRoute.to}
+																className={({ isActive }) =>
+																	isActive ? "activeHeaderStyle" : undefined
+																}>
+																<pre>{subRoute.text}</pre>
+															</NavLink>
+														))}
+													</div>
+												</div>
+											) : (
+												<NavLink
+													key={link.to}
+													to={link.to}
+													className={({ isActive }) =>
+														isActive ? "activeHeaderStyle" : undefined
+													}>
+													{link.text}
+												</NavLink>
+											)
+										)}
 									</div>
 								</div>
 								<div className="right">
