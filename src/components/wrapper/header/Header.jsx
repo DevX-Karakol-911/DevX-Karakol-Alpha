@@ -17,10 +17,10 @@ const links = [
 		subRoutes: [
 			{ to: "/projects/fullstack", text: "Full Stack" },
 			{ to: "/projects/sdet", text: "SDET" },
-			{ to: "/projects/uiux", text: "UI & UX" },
-		],
+			{ to: "/projects/uiux", text: "UI & UX" }
+		]
 	},
-	{ to: "/contact", text: "Contacts" },
+	{ to: "/contact", text: "Contacts" }
 ];
 
 export const Header = () => {
@@ -50,7 +50,8 @@ export const Header = () => {
 									to="/"
 									onClick={() => {
 										setIsOpen(false);
-									}}>
+									}}
+								>
 									{isDark ? (
 										<img src={logo} alt="DevX logo" />
 									) : (
@@ -71,7 +72,8 @@ export const Header = () => {
 															aria-hidden="true"
 															focusable="false"
 															viewBox="0 0 24 24"
-															className="arrow__icon">
+															className="arrow__icon"
+														>
 															<path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" />
 														</svg>
 													</span>
@@ -83,7 +85,8 @@ export const Header = () => {
 																to={subRoute.to}
 																className={({ isActive }) =>
 																	isActive ? "activeHeaderStyle" : undefined
-																}>
+																}
+															>
 																<pre>{subRoute.text}</pre>
 															</NavLink>
 														))}
@@ -95,7 +98,8 @@ export const Header = () => {
 													to={link.to}
 													className={({ isActive }) =>
 														isActive ? "activeHeaderStyle" : undefined
-													}>
+													}
+												>
 													{link.text}
 												</NavLink>
 											)
@@ -114,13 +118,15 @@ export const Header = () => {
 							<div
 								className={
 									isOpen ? "nav__burger__menu show" : "nav__burger__menu"
-								}>
+								}
+							>
 								{links.map((link) =>
 									link.subRoutes ? (
 										<div
 											className={isOpenDropdown ? "dropdown open" : "dropdown"}
 											key={link.to}
-											onClick={() => setIsOpenDropdown(!isOpenDropdown)}>
+											onClick={() => setIsOpenDropdown(!isOpenDropdown)}
+										>
 											<span>
 												<pre>{link.text}</pre>
 												<svg
@@ -129,7 +135,8 @@ export const Header = () => {
 													focusable="false"
 													viewBox="0 0 24 24"
 													className="button__icon"
-													data-v-3a85cb39="">
+													data-v-3a85cb39=""
+												>
 													<path d="M18.9,10.9h-6v-6c0-0.6-0.4-1-1-1s-1,0.4-1,1v6h-6c-0.6,0-1,0.4-1,1s0.4,1,1,1h6v6c0,0.6,0.4,1,1,1s1-0.4,1-1v-6h6c0.6,0,1-0.4,1-1S19.5,10.9,18.9,10.9z"></path>
 												</svg>
 											</span>
@@ -139,7 +146,8 @@ export const Header = () => {
 													isOpenDropdown
 														? "dropdown__content open"
 														: "dropdown__content"
-												}>
+												}
+											>
 												{link.subRoutes.map((subRoute) => (
 													<NavLink
 														key={subRoute.to}
@@ -151,7 +159,8 @@ export const Header = () => {
 														}}
 														className={({ isActive }) =>
 															isActive ? "activeHeaderStyle" : undefined
-														}>
+														}
+													>
 														<pre>{subRoute.text}</pre>
 													</NavLink>
 												))}
@@ -167,7 +176,8 @@ export const Header = () => {
 											}}
 											className={({ isActive }) =>
 												isActive ? "activeHeaderStyle" : undefined
-											}>
+											}
+										>
 											{link.text}
 										</NavLink>
 									)
@@ -177,7 +187,8 @@ export const Header = () => {
 										className="button__switch__theme"
 										onClick={() => {
 											setIsDark(!isDark);
-										}}>
+										}}
+									>
 										Appearance
 									</div>
 									<div className="icon__switch__theme">
@@ -192,7 +203,8 @@ export const Header = () => {
 							<div className="burger__button">
 								<div
 									className={isOpen ? "burger__icon open" : "burger__icon"}
-									onClick={() => setIsOpen(!isOpen)}>
+									onClick={() => setIsOpen(!isOpen)}
+								>
 									<span />
 								</div>
 							</div>
