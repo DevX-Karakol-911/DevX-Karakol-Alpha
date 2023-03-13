@@ -37,7 +37,11 @@ export const Header = () => {
 						<div className="content">
 							{/* ! header menu */}
 							<div className="logo">
-								<NavLink to="/">
+								<NavLink
+									to="/"
+									onClick={() => {
+										setIsOpen(false);
+									}}>
 									{isDark ? (
 										<img src={logo} alt="DevX logo" />
 									) : (
