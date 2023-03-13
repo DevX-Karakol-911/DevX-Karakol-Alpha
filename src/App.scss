@@ -157,6 +157,12 @@ body {
 					color: var(--header-HoverMenuDropdown-text-light);
 				}
 
+				@media (max-width: 700px) {
+					&:hover {
+						color: var(--header-text-light);
+					}
+				}
+
 				.dropdown__content {
 					a {
 						border: none;
@@ -320,9 +326,17 @@ body {
 			.dropdown {
 				border-bottom: 1px solid var(--header-burger-line-dark);
 				color: var(--header-text-dark);
+
 				&:hover {
 					color: var(--header-HoverMenuDropdown-text-dark);
 				}
+
+				@media (max-width: 700px) {
+					&:hover {
+						color: var(--header-text-dark);
+					}
+				}
+
 				.dropdown__content {
 					a {
 						border: none;
