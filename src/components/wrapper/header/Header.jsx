@@ -67,6 +67,7 @@ export const Header = () => {
 									onClick={() => {
 										setIsOpen(false);
 										setIsOpenDropdown(false);
+										setIsOpenDropdownLanguage(false);
 									}}
 								>
 									{isDark ? (
@@ -248,6 +249,7 @@ export const Header = () => {
 											onClick={() => {
 												setIsOpen(false);
 												setIsOpenDropdown(false);
+												setIsOpenDropdownLanguage(false);
 											}}
 											className={({ isActive }) =>
 												isActive ? "activeHeaderStyle" : undefined
