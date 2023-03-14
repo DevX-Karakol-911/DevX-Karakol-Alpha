@@ -303,7 +303,7 @@ export const Header = () => {
 										onClick={(event) => {
 											event.stopPropagation();
 											setIsOpen(false);
-											setIsOpenDropdownLanguage(false);
+											setIsOpenDropdownLanguage(true);
 										}}
 									>
 										<div
