@@ -4,9 +4,10 @@ import { Registration } from "./components/auth/Registration";
 import { Wrapper } from "./components/wrapper/Wrapper";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "./components/auth/ProtectedRoute";
-import { AuthProvider } from "./provider/AuthProvider";
 import { Layout } from "./components/Layout";
+import { AuthProvider } from "./provider/AuthProvider";
 import { ThemeProvider } from "./provider/ThemeProvider";
+import { TranslatorProvider } from "./provider/TranslatorProvider";
 
 import "./App.scss";
 import { PreLoader } from "./components/pre_loader/PreLoader";
@@ -37,7 +38,9 @@ export const App = () => {
 										path="*"
 										element={
 											<ProtectedRoute>
-												<Wrapper />
+												<TranslatorProvider>
+													<Wrapper />
+												</TranslatorProvider>
 											</ProtectedRoute>
 										}
 									/>

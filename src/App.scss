@@ -122,7 +122,46 @@ body {
 					background: var(--header-dropdown-content-bg-light);
 					a:hover {
 						background: var(--header-HoverDropdown-content-button-light);
+						color: var(--header-HoverMenuDropdown-text-light);
 					}
+				}
+			}
+		}
+
+		// ? dropdown Translator
+		.dropdown__fthsrtg {
+			color: var(--header-text-light);
+
+			&:hover {
+				color: var(--header-HoverDropdown-text-light);
+				.arrow__icon {
+					fill: var(--header-HoverDropdown-text-light);
+				}
+			}
+
+			span {
+				.arrow__icon__V1 {
+					fill: var(--header-text-light);
+				}
+				.arrow__icon__V2 {
+					fill: var(--header-text-light);
+				}
+			}
+			.dropdown__content {
+				background: var(--header-dropdown-content-bg-light);
+
+				button {
+					background: var(--header-dropdown-content-bg-light);
+					color: var(--header-text-light);
+
+					&:hover {
+						background: var(--header-HoverDropdown-content-button-light);
+						color: var(--header-HoverMenuDropdown-text-light);
+					}
+				}
+
+				button.active {
+					color: var(--header-HoverMenuDropdown-text-light);
 				}
 			}
 		}
@@ -296,7 +335,46 @@ body {
 					background: var(--header-dropdown-content-bg-dark);
 					a:hover {
 						background: var(--header-HoverDropdown-content-button-dark);
+						color: var(--header-HoverMenuDropdown-text-dark);
 					}
+				}
+			}
+		}
+
+		// ? dropdown Translator
+		.dropdown__fthsrtg {
+			color: var(--header-text-dark);
+
+			&:hover {
+				color: var(--header-HoverDropdown-text-dark);
+				.arrow__icon {
+					fill: var(--header-HoverDropdown-text-dark);
+				}
+			}
+
+			span {
+				.arrow__icon__V1 {
+					fill: var(--header-text-dark);
+				}
+				.arrow__icon__V2 {
+					fill: var(--header-text-dark);
+				}
+			}
+			.dropdown__content {
+				background: var(--header-dropdown-content-bg-dark);
+
+				button {
+					background: var(--header-dropdown-content-bg-dark);
+					color: var(--header-text-dark);
+
+					&:hover {
+						background: var(--header-HoverDropdown-content-button-dark);
+						color: var(--header-HoverMenuDropdown-text-dark);
+					}
+				}
+
+				button.active {
+					color: var(--header-HoverMenuDropdown-text-dark);
 				}
 			}
 		}

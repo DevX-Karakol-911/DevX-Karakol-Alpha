@@ -65,7 +65,7 @@
 			padding: 10px 12px;
 
 			font-size: 15px;
-			font-weight: 600;
+			font-weight: 500;
 			text-decoration: none;
 
 			transition: 0.3s;
@@ -126,12 +126,77 @@
 	.right {
 		display: flex;
 		align-items: center;
+
+		.dropdown__fthsrtg {
+			position: relative;
+			padding: 21px 40px 21px 12px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: 0.3s;
+
+			.arrow__icon {
+				transition: 0.3s;
+			}
+
+			span {
+				position: relative;
+
+				.arrow__icon__V1 {
+					position: absolute;
+					top: 53%;
+					right: -10px;
+					transform: translateY(-50%);
+					width: 17px;
+					height: 17px;
+				}
+				.arrow__icon__V2 {
+					position: absolute;
+					top: 53%;
+					right: -30px;
+					transform: translateY(-50%);
+					width: 17px;
+					height: 17px;
+				}
+			}
+			.dropdown__content {
+				position: absolute;
+				top: 35px;
+				right: 0;
+				opacity: 0;
+				visibility: hidden;
+
+				padding: 10px;
+				display: flex;
+				flex-direction: column;
+				box-shadow: 0px 5px 20px #00000046;
+
+				border-radius: 10px;
+				transform: scale(0.8) translateZ(0);
+				transition: opacity 0.2s, transform 0.3s, visibility 0s;
+
+				cursor: default;
+
+				button {
+					padding: 10px 12px;
+					border: none;
+					border-radius: 10px;
+					cursor: pointer;
+
+					transition: 0.2s;
+				}
+			}
+
+			&:hover .dropdown__content {
+				opacity: 1;
+				visibility: visible;
+				transform: none;
+			}
+		}
 	}
 
 	.switch__theme {
 		display: inline-flex;
 		margin: 0 20px;
-		// border-radius: 50%;
 
 		transition: all 0.3s ease-in-out;
 
