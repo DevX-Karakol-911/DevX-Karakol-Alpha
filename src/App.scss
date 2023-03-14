@@ -259,6 +259,10 @@ body {
 					color: var(--header-text-light);
 
 					cursor: default;
+
+					&:hover {
+						color: var(--header-text-light);
+					}
 				}
 			}
 
@@ -488,6 +492,10 @@ body {
 						color: var(--header-text-dark);
 
 						cursor: default;
+
+						&:hover {
+							color: var(--header-text-dark);
+						}
 					}
 				}
 
