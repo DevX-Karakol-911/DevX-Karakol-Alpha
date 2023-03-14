@@ -9,22 +9,22 @@ i18n
 	.use(initReactI18next)
 	.init({
 		fallbackLng: "en",
-		debug: true, // ? это аналог console.log()
+		debug: false, // ? это аналог console.log()
 		detection: {
 			order: ["localStorage", "navigator"],
-			caches: ["localStorage"],
+			caches: ["localStorage"]
 		},
 		interpolation: {
-			escapeValue: false,
+			escapeValue: false
 		},
 		saveMissing: true,
 		backend: {
 			loadPath: "/locales/{{lng}}/{{ns}}.json",
-			addPath: "/locales/add/{{lng}}/{{ns}}",
+			addPath: "/locales/add/{{lng}}/{{ns}}"
 		},
 		react: {
-			useSuspense: false,
-		},
+			useSuspense: false
+		}
 	});
 
 export default i18n;
