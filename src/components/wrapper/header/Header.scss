@@ -71,6 +71,7 @@
 			transition: 0.3s;
 		}
 
+		// ? dropdown menu for desktop
 		.dropdown {
 			position: relative;
 			padding: 10px 30px 10px 12px;
@@ -127,6 +128,7 @@
 		display: flex;
 		align-items: center;
 
+		// ? dropdown language menu for desktop
 		.dropdown__language__menu__for__desktop__fthsrtg {
 			position: relative;
 			padding: 21px 40px 21px 12px;
@@ -185,7 +187,7 @@
 					transition: 0.2s;
 				}
 
-				.button.active{
+				.button.active {
 					cursor: default;
 				}
 			}
