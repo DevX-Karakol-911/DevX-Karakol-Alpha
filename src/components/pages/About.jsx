@@ -9,7 +9,7 @@ export const About = () => {
 		<div className="about">
 			<div className="container">
 				<div className="content">
-					<h1>About Me</h1>
+					<h1>{t('about__title')}</h1>
 					<p>{t("about__text")}</p>
 				</div>
 			</div>

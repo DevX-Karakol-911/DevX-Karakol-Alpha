@@ -161,6 +161,8 @@ body {
 				}
 
 				button.active {
+					cursor: default;
+					background: transparent;
 					color: var(--header-HoverMenuDropdown-text-light);
 				}
 			}
@@ -239,6 +241,50 @@ body {
 				span {
 					background: transparent;
 				}
+			}
+		}
+
+		// ? dropdown language menu
+		.dropdown__language__menu__fthsrtg {
+			border-bottom: 1px solid var(--header-burger-line-light);
+
+			span {
+				color: var(--header-text-light);
+
+				&:hover {
+					color: var(--header-HoverMenuDropdown-text-light);
+				}
+
+				@media (max-width: 700px) {
+					color: var(--header-text-light);
+
+					cursor: default;
+				}
+			}
+
+			.dropdown__content.open {
+				.button {
+					cursor: pointer;
+					border: none;
+
+					color: var(--header-text-light);
+
+					&:hover {
+						color: var(--header-ActText-light);
+					}
+
+					@media (max-width: 700px) {
+						cursor: default;
+					}
+				}
+				.button.active {
+					color: var(--header-ActText-light);
+				}
+			}
+		}
+		.dropdown__language__menu__fthsrtg.open {
+			span {
+				color: var(--header-HoverMenuDropdown-text-light);
 			}
 		}
 	}
@@ -374,6 +420,8 @@ body {
 				}
 
 				button.active {
+					cursor: default;
+					background: transparent;
 					color: var(--header-HoverMenuDropdown-text-dark);
 				}
 			}
@@ -423,6 +471,50 @@ body {
 			}
 			.dropdown.open {
 				color: var(--header-HoverMenuDropdown-text-dark);
+			}
+
+			// ? dropdown language menu
+			.dropdown__language__menu__fthsrtg {
+				border-bottom: 1px solid var(--header-burger-line-dark);
+
+				span {
+					color: var(--header-text-dark);
+
+					&:hover {
+						color: var(--header-HoverMenuDropdown-text-dark);
+					}
+
+					@media (max-width: 700px) {
+						color: var(--header-text-dark);
+
+						cursor: default;
+					}
+				}
+
+				.dropdown__content.open {
+					.button {
+						cursor: pointer;
+						border: none;
+
+						color: var(--header-text-dark);
+
+						&:hover {
+							color: var(--header-ActText-dark);
+						}
+
+						@media (max-width: 700px) {
+							cursor: default;
+						}
+					}
+					.button.active {
+						color: var(--header-ActText-dark);
+					}
+				}
+			}
+			.dropdown__language__menu__fthsrtg.open {
+				span {
+					color: var(--header-HoverMenuDropdown-text-dark);
+				}
 			}
 
 			// ? switch theme

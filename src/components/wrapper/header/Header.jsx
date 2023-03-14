@@ -14,6 +14,7 @@ export const Header = () => {
 	const [headerScroll, setHeaderScroll] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 	const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+	const [isOpenDropdownLanguage, setIsOpenDropdownLanguage] = useState(false);
 	const { t, changeLanguage } = useContext(TranslatorContext);
 	const [currentLanguage, setCurrentLanguage] = useState(
 		localStorage.getItem("i18nextLng")
@@ -65,6 +66,7 @@ export const Header = () => {
 									to="/"
 									onClick={() => {
 										setIsOpen(false);
+										setIsOpenDropdown(false);
 									}}
 								>
 									{isDark ? (
@@ -194,7 +196,10 @@ export const Header = () => {
 										<div
 											className={isOpenDropdown ? "dropdown open" : "dropdown"}
 											key={link.to}
-											onClick={() => setIsOpenDropdown(!isOpenDropdown)}
+											onClick={() => {
+												setIsOpenDropdown(!isOpenDropdown);
+												setIsOpenDropdownLanguage(false);
+											}}
 										>
 											<span>
 												<pre>{link.text}</pre>
@@ -225,6 +230,7 @@ export const Header = () => {
 															event.stopPropagation();
 															setIsOpen(false);
 															setIsOpenDropdown(true);
+															setIsOpenDropdownLanguage(false);
 														}}
 														className={({ isActive }) =>
 															isActive ? "activeHeaderStyle" : undefined
@@ -251,6 +257,75 @@ export const Header = () => {
 										</NavLink>
 									)
 								)}
+								<div
+									className={
+										isOpenDropdownLanguage
+											? "dropdown__language__menu__fthsrtg open"
+											: "dropdown__language__menu__fthsrtg"
+									}
+									onClick={() => {
+										setIsOpenDropdownLanguage(!isOpenDropdownLanguage);
+									}}
+								>
+									<span>
+										Switch language
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											aria-hidden="true"
+											focusable="false"
+											viewBox="0 0 24 24"
+											className="arrow__icon arrow__icon__V1"
+											data-v-0895989d=""
+										>
+											<path d="M0 0h24v24H0z" fill="none"></path>
+											<path
+												d=" M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z "
+												className="css-c4d79v"
+											></path>
+										</svg>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											aria-hidden="true"
+											focusable="false"
+											viewBox="0 0 24 24"
+											className="arrow__icon arrow__icon__V2"
+										>
+											<path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" />
+										</svg>
+									</span>
+
+									<div
+										className={
+											isOpenDropdownLanguage
+												? "dropdown__content open"
+												: "dropdown__content"
+										}
+										onClick={(event) => {
+											event.stopPropagation();
+											setIsOpen(false);
+											setIsOpenDropdownLanguage(false);
+										}}
+									>
+										<div
+											onClick={() => handleLanguageChange("en")}
+											className={isLanguage("en") ? "button active" : "button"}
+										>
+											EN
+										</div>
+										<div
+											onClick={() => handleLanguageChange("ru")}
+											className={isLanguage("ru") ? "button active" : "button"}
+										>
+											RU
+										</div>
+										<div
+											onClick={() => handleLanguageChange("cn")}
+											className={isLanguage("cn") ? "button active" : "button"}
+										>
+											CN
+										</div>
+									</div>
+								</div>
 								<div className="burger__menu__switch__theme">
 									<div
 										className="button__switch__theme"
