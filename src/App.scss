@@ -163,6 +163,10 @@ body {
 
 				.button.active {
 					color: var(--header-HoverMenuDropdown-text-light);
+
+					&:hover {
+						background: transparent;
+					}
 				}
 			}
 		}
@@ -416,6 +420,10 @@ body {
 
 				.button.active {
 					color: var(--header-HoverMenuDropdown-text-dark);
+
+					&:hover {
+						background: transparent;
+					}
 				}
 			}
 		}
