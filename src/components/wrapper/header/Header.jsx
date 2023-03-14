@@ -124,7 +124,7 @@ export const Header = () => {
 									</div>
 								</div>
 								<div className="right">
-									<div className="dropdown__fthsrtg">
+									<div className="dropdown__language__menu__for__desktop__fthsrtg">
 										<span>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -260,8 +260,8 @@ export const Header = () => {
 								<div
 									className={
 										isOpenDropdownLanguage
-											? "dropdown__language__menu__fthsrtg open"
-											: "dropdown__language__menu__fthsrtg"
+											? "dropdown__language__menu__for__mobile__fthsrtg open"
+											: "dropdown__language__menu__for__mobile__fthsrtg"
 									}
 									onClick={() => {
 										setIsOpenDropdownLanguage(!isOpenDropdownLanguage);
