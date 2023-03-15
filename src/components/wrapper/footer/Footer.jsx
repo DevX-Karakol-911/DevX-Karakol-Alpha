@@ -1,54 +1,61 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../footer/Footer.scss";
 import devxLogo from "../../../assets/logo.png";
 import instIcon from "../../../assets/icons/footer/instagram_icon.svg";
 import githubIcon from "../../../assets/icons/footer/github_icon.svg";
 import discordIcon from "../../../assets/icons/footer/discord_icon.svg";
+import { TranslatorContext } from "../../../provider/TranslatorProvider";
+import { NavLink } from "react-router-dom";
 
-export const Footer = () => {
+export const Footer = (props) => {
+	const { t } = useContext(TranslatorContext);
+
 	return (
 		<div className="footer">
 			<div className="container">
 				<div className="content">
 					<div className="footer__top">
 						<div className="block">
-							<img className="logo" src={devxLogo} alt="iksu_devx_logo" />
-							<p>
-								Level up your career, income, and life. WEDEVX helped over 432
-								students land their first jobs in tech, become the next one and
-								change your life today!
-							</p>
+							<NavLink
+								to="/"
+								onClick={() => {
+									props.setIsOpen(false);
+									props.setIsOpenDropdown(false);
+									props.setIsOpenDropdownLanguage(false);
+								}}
+							>
+								<img className="logo" src={devxLogo} alt="iksu_devx_logo" />
+							</NavLink>
+							<p>{t("footer__text1__block1")}</p>
 						</div>
 						<div className="block">
-							<h6>Courses</h6>
-							<a href="#">SDET</a>
-							<a href="#">Full Stack</a>
+							<h6>{t("footer__title__block2")}</h6>
+							<a href="#">{t("footer__text1__block2")}</a>
+							<a href="#">{t("footer__text2__block2")}</a>
 						</div>
 						<div className="block">
-							<h6>Karakol-IKSU</h6>
-							<a href="#">Pricing</a>
-							<a href="#">About Us</a>
-							<a href="#">FAQs</a>
+							<h6>{t("footer__title__block3")}</h6>
+							<a href="#">{t("footer__text1__block3")}</a>
+							<a href="#">{t("footer__text1__block3")}</a>
+							<a href="#">{t("footer__text1__block3")}</a>
 						</div>
 						<div className="block">
-							<h6>Contact Us</h6>
-							<a href="#">hello@devxschool.com</a>
-							<a href="#">312-667-9735</a>
+							<h6>{t("footer__title__block4")}</h6>
+							<a href="#">{t("footer__text1__block4")}</a>
+							<a href="#">{t("footer__text2__block4")}</a>
 						</div>
 					</div>
 					<hr />
 					<div className="footer__bottom">
-						<div className="copyright">
-							Copyright © 2023 DevX | Powered by Elcho911
-						</div>
+						<div className="copyright">{t("footer__copyright")}</div>
 						<div className="icons">
-							<a href="">
+							<a href="https://www.instagram.com/elcho911/" target="_blank">
 								<img src={instIcon} alt="inst" />
 							</a>
-							<a href="">
+							<a href="https://github.com/Elkhan2003" target="_blank">
 								<img src={githubIcon} alt="github" />
 							</a>
-							<a href="">
+							<a href="https://discord.gg/NZpxaY4CGC" target="_blank">
 								<img src={discordIcon} alt="discord" />
 							</a>
 						</div>

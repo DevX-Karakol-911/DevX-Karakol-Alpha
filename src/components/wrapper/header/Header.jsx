@@ -9,12 +9,9 @@ import "./Header.scss";
 import logo from "../../../assets/logo.png";
 import logoDark from "../../../assets/logo-dark.png";
 
-export const Header = () => {
+export const Header = (props) => {
 	const { isDark, setIsDark } = useTheme();
 	const [headerScroll, setHeaderScroll] = useState(false);
-	const [isOpen, setIsOpen] = useState(false);
-	const [isOpenDropdown, setIsOpenDropdown] = useState(false);
-	const [isOpenDropdownLanguage, setIsOpenDropdownLanguage] = useState(false);
 	const { t, changeLanguage } = useContext(TranslatorContext);
 	const [currentLanguage, setCurrentLanguage] = useState(
 		localStorage.getItem("i18nextLng")
@@ -65,9 +62,9 @@ export const Header = () => {
 								<NavLink
 									to="/"
 									onClick={() => {
-										setIsOpen(false);
-										setIsOpenDropdown(false);
-										setIsOpenDropdownLanguage(false);
+										props.setIsOpen(false);
+										props.setIsOpenDropdown(false);
+										props.setIsOpenDropdownLanguage(false);
 									}}
 								>
 									{isDark ? (
@@ -189,17 +186,19 @@ export const Header = () => {
 							{/* ! burger menu */}
 							<div
 								className={
-									isOpen ? "nav__burger__menu show" : "nav__burger__menu"
+									props.isOpen ? "nav__burger__menu show" : "nav__burger__menu"
 								}
 							>
 								{links.map((link) =>
 									link.subRoutes ? (
 										<div
-											className={isOpenDropdown ? "dropdown open" : "dropdown"}
+											className={
+												props.isOpenDropdown ? "dropdown open" : "dropdown"
+											}
 											key={link.to}
 											onClick={() => {
-												setIsOpenDropdown(!isOpenDropdown);
-												setIsOpenDropdownLanguage(false);
+												props.setIsOpenDropdown(!props.isOpenDropdown);
+												props.setIsOpenDropdownLanguage(false);
 											}}
 										>
 											<span>
@@ -218,7 +217,7 @@ export const Header = () => {
 
 											<div
 												className={
-													isOpenDropdown
+													props.isOpenDropdown
 														? "dropdown__content open"
 														: "dropdown__content"
 												}
@@ -229,9 +228,9 @@ export const Header = () => {
 														to={subRoute.to}
 														onClick={(event) => {
 															event.stopPropagation();
-															setIsOpen(false);
-															setIsOpenDropdown(true);
-															setIsOpenDropdownLanguage(false);
+															props.setIsOpen(false);
+															props.setIsOpenDropdown(true);
+															props.setIsOpenDropdownLanguage(false);
 														}}
 														className={({ isActive }) =>
 															isActive ? "activeHeaderStyle" : undefined
@@ -247,9 +246,9 @@ export const Header = () => {
 											key={link.to}
 											to={link.to}
 											onClick={() => {
-												setIsOpen(false);
-												setIsOpenDropdown(false);
-												setIsOpenDropdownLanguage(false);
+												props.setIsOpen(false);
+												props.setIsOpenDropdown(false);
+												props.setIsOpenDropdownLanguage(false);
 											}}
 											className={({ isActive }) =>
 												isActive ? "activeHeaderStyle" : undefined
@@ -261,12 +260,14 @@ export const Header = () => {
 								)}
 								<div
 									className={
-										isOpenDropdownLanguage
+										props.isOpenDropdownLanguage
 											? "dropdown__language__menu__for__mobile__fthsrtg open"
 											: "dropdown__language__menu__for__mobile__fthsrtg"
 									}
 									onClick={() => {
-										setIsOpenDropdownLanguage(!isOpenDropdownLanguage);
+										props.setIsOpenDropdownLanguage(
+											!props.isOpenDropdownLanguage
+										);
 									}}
 								>
 									<span>
@@ -298,14 +299,14 @@ export const Header = () => {
 
 									<div
 										className={
-											isOpenDropdownLanguage
+											props.isOpenDropdownLanguage
 												? "dropdown__content open"
 												: "dropdown__content"
 										}
 										onClick={(event) => {
 											event.stopPropagation();
-											setIsOpen(false);
-											setIsOpenDropdownLanguage(true);
+											props.setIsOpen(false);
+											props.setIsOpenDropdownLanguage(true);
 										}}
 									>
 										<div
@@ -348,8 +349,10 @@ export const Header = () => {
 
 							<div className="burger__button">
 								<div
-									className={isOpen ? "burger__icon open" : "burger__icon"}
-									onClick={() => setIsOpen(!isOpen)}
+									className={
+										props.isOpen ? "burger__icon open" : "burger__icon"
+									}
+									onClick={() => props.setIsOpen(!props.isOpen)}
 								>
 									<span />
 								</div>
@@ -360,7 +363,7 @@ export const Header = () => {
 									<input
 										type="checkbox"
 										checked={isOpen}
-										onChange={() => setIsOpen(!isOpen)}
+										onChange={() => props.setIsOpen(!isOpen)}
 									/>
 									<span></span>
 									<span></span>
