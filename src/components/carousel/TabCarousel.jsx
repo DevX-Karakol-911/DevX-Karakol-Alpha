@@ -86,7 +86,7 @@ export const TabCarousel = () => {
 									<img src={tab.company} alt="company" />
 								</div>
 								<div className={index === activeTab ? "role active" : "role"}>
-									<p>{tab.label}</p>
+									<pre>{tab.label}</pre>
 								</div>
 							</div>
 						))}
@@ -98,7 +98,7 @@ export const TabCarousel = () => {
 								index === activeTab ? "base_people active" : "base_people"
 							}
 						>
-							<p className="person__company">{tab.area}</p>
+							<pre className="person__company">{tab.area}</pre>
 							<img className="person__img" src={tab.image} alt="people" />
 						</div>
 					))}

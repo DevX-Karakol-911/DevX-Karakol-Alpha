@@ -167,6 +167,14 @@ export const Header = (props) => {
 												RU
 											</button>
 											<button
+												onClick={() => handleLanguageChange("kg")}
+												className={
+													isLanguage("kg") ? "button active" : "button"
+												}
+											>
+												KG
+											</button>
+											<button
 												onClick={() => handleLanguageChange("cn")}
 												className={
 													isLanguage("cn") ? "button active" : "button"
@@ -321,6 +329,14 @@ export const Header = (props) => {
 										>
 											RU
 										</div>
+										<button
+												onClick={() => handleLanguageChange("kg")}
+												className={
+													isLanguage("kg") ? "button active" : "button"
+												}
+											>
+												KG
+											</button>
 										<div
 											onClick={() => handleLanguageChange("cn")}
 											className={isLanguage("cn") ? "button active" : "button"}
