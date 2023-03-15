@@ -37,19 +37,19 @@ export const Footer = (props) => {
 						</div>
 						<div className="block">
 							<h6>{t("footer__title__block2")}</h6>
-							<a href="#">{t("footer__text1__block2")}</a>
-							<a href="#">{t("footer__text2__block2")}</a>
+							<a className="link__text" href="#">{t("footer__text1__block2")}</a>
+							<a className="link__text" href="#">{t("footer__text2__block2")}</a>
 						</div>
 						<div className="block">
 							<h6>{t("footer__title__block3")}</h6>
-							<a href="#">{t("footer__text1__block3")}</a>
-							<a href="#">{t("footer__text2__block3")}</a>
-							<a href="#">{t("footer__text3__block3")}</a>
+							<a className="link__text" href="#">{t("footer__text1__block3")}</a>
+							<a className="link__text" href="#">{t("footer__text2__block3")}</a>
+							<a className="link__text" href="#">{t("footer__text3__block3")}</a>
 						</div>
 						<div className="block">
 							<h6>{t("footer__title__block4")}</h6>
-							<a href="#">{t("footer__text1__block4")}</a>
-							<a href="#">{t("footer__text2__block4")}</a>
+							<a className="link__text" href="#">{t("footer__text1__block4")}</a>
+							<a className="link__text" href="#">{t("footer__text2__block4")}</a>
 						</div>
 					</div>
 					<hr />
