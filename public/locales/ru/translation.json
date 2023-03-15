@@ -6,6 +6,7 @@
 	"header__sdet": "SDET",
 	"header__uiux": "UI & UX",
 	"header__contacts": "Контакты",
+	"header__switch__lang": "Переключить языка",
 	"header__appearance": "Внешний вид",
 
 	"logout__hi": "Hi,",
