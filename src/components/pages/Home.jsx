@@ -22,7 +22,9 @@ export const Home = () => {
 					</div>
 				</div>
 			</div>
-			<SwiperCarousel />
+			<div className="section__2">
+				<SwiperCarousel />
+			</div>
 		</div>
 	);
 };
