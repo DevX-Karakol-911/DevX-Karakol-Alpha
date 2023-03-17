@@ -9,6 +9,7 @@ import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 import pic from "./img-slider/Elcho911.webp";
 
 export const SwiperCarousel = () => {
+	const swiperRef = useRef(null);
 	const progressCircle = useRef(null);
 	const progressContent = useRef(null);
 	const onAutoplayTimeLeft = (s, time, progress) => {
@@ -48,7 +49,7 @@ export const SwiperCarousel = () => {
 			prevEl: ".swiper-button-prev",
 			clickable: true
 		},
-		loop: true,
+		// loop: true,
 		autoplay: {
 			delay: 2500,
 			disableOnInteraction: false
@@ -155,13 +156,17 @@ export const SwiperCarousel = () => {
 		}
 	];
 
+	const handleImageClick = (index) => {
+		swiperRef.current.swiper.slideTo(index);
+	};
+
 	return (
 		<>
-			<Swiper {...options} className="my-slide">
-				{slides.map((slide) => (
+			<Swiper {...options} className="my-slide" ref={swiperRef}>
+				{slides.map((slide, index) => (
 					<SwiperSlide key={slide.id}>
 						<div className="card">
-							<img src={slide.imgSrc} />
+							<img src={slide.imgSrc} onClick={() => handleImageClick(index)} />
 							<div className="about__people">
 								<h2>{slide.name}</h2>
 								<p>{slide.position}</p>
