@@ -4,10 +4,7 @@
 	max-width: 1200px;
 
 	.swiper-wrapper {
-		// width: auto !important;
 		width: 0 !important;
-		// display: flex !important;
-		// justify-content: space-between !important;
 
 		.swiper-slide {
 			background-position: center;
@@ -89,7 +86,6 @@
 
 .slider-controller {
 	position: relative;
-	// margin-top: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

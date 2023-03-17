@@ -32,9 +32,6 @@ export const SwiperCarousel = () => {
 			950: {
 				slidesPerView: "auto"
 			}
-			// 1200: {
-			// 	slidesPerView: 5
-			// }
 		},
 		coverflowEffect: {
 			rotate: 25,
