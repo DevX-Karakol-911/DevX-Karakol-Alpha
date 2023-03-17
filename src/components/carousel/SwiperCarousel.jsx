@@ -159,7 +159,7 @@ export const SwiperCarousel = () => {
 					<span ref={progressContent}></span>
 				</div>
 			</Swiper>
-			<div className="slider-controler">
+			<div className="slider-controller">
 				<div className="swiper-button-prev button">prev</div>
 				<div className="swiper-button-next button">next</div>
 			</div>
