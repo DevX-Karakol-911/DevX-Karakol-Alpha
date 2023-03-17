@@ -19,7 +19,7 @@ export const SwiperCarousel = () => {
 	const options = {
 		modules: [EffectCoverflow, Pagination, Navigation, Autoplay],
 		effect: "coverflow",
-		spaceBetween: 25,
+		spaceBetween: 30,
 		grabCursor: true,
 		centeredSlides: true,
 		breakpoints: {
@@ -32,9 +32,12 @@ export const SwiperCarousel = () => {
 			950: {
 				slidesPerView: "auto"
 			}
+			// 1200: {
+			// 	slidesPerView: 5
+			// }
 		},
 		coverflowEffect: {
-			rotate: 27,
+			rotate: 25,
 			stretch: 0,
 			depth: 100,
 			modifier: 1,
@@ -137,6 +140,18 @@ export const SwiperCarousel = () => {
 		},
 		{
 			id: 14,
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
+		},
+		{
+			id: 15,
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
+		},
+		{
+			id: 16,
 			imgSrc: pic,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"

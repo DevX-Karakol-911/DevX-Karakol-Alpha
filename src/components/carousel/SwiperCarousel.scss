@@ -1,7 +1,7 @@
 .swiper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1300px;
+	max-width: 1200px;
 
 	.swiper-wrapper {
 		// width: auto !important;
@@ -12,14 +12,18 @@
 		.swiper-slide {
 			background-position: center;
 			background-size: cover;
-			width: 220px;
-			height: 430px;
+			width: 210px;
+			height: 440px;
 
-			img {
-				display: block;
+			.card {
+				position: relative;
 				width: 100%;
-				max-width: 220px;
-				max-height: 325px;
+				img {
+					display: block;
+					width: 100%;
+					max-width: 210px;
+					max-height: 337px;
+				}
 			}
 
 			&.swiper-slide-active {
