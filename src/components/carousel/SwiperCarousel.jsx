@@ -6,6 +6,8 @@ import "swiper/css/pagination";
 import "./SwiperCarousel.scss";
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 
+import pic from "./img-slider/Elcho911.webp";
+
 export const SwiperCarousel = () => {
 	const progressCircle = useRef(null);
 	const progressContent = useRef(null);
@@ -17,7 +19,7 @@ export const SwiperCarousel = () => {
 	const options = {
 		modules: [EffectCoverflow, Pagination, Navigation, Autoplay],
 		effect: "coverflow",
-		spaceBetween: 30,
+		spaceBetween: 25,
 		grabCursor: true,
 		centeredSlides: true,
 		breakpoints: {
@@ -32,7 +34,7 @@ export const SwiperCarousel = () => {
 			}
 		},
 		coverflowEffect: {
-			rotate: 30,
+			rotate: 27,
 			stretch: 0,
 			depth: 100,
 			modifier: 1,
@@ -47,85 +49,97 @@ export const SwiperCarousel = () => {
 			clickable: true
 		},
 		loop: true,
-		// autoplay: {
-		// 	delay: 2500,
-		// 	disableOnInteraction: false
-		// },
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false
+		},
 		onAutoplayTimeLeft: onAutoplayTimeLeft
 	};
 
 	const slides = [
 		{
 			id: 1,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=1",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		},
 		{
 			id: 2,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=2",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		},
 		{
 			id: 3,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=3",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		},
 		{
 			id: 4,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=4",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		},
 		{
 			id: 5,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=5",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		},
 		{
 			id: 6,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=6",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		},
 		{
 			id: 7,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=7",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		},
 		{
 			id: 8,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=8",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		},
 		{
 			id: 9,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=9",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		},
 		{
 			id: 10,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=10",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		},
 		{
 			id: 11,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=11",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		},
 		{
 			id: 12,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=12",
-			name: "Elcho Effects",
-			position: "Full-Stack DevX"
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
+		},
+		{
+			id: 13,
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
+		},
+		{
+			id: 14,
+			imgSrc: pic,
+			name: "Elcho911",
+			position: "Full-Stack DevXer"
 		}
 	];
 
