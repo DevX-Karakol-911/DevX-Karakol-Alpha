@@ -4,13 +4,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./SwiperCarousel.scss";
-import {
-	EffectCoverflow,
-	Pagination,
-	Navigation,
-	Autoplay,
-	FreeMode
-} from "swiper";
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 
 export const SwiperCarousel = () => {
 	const progressCircle = useRef(null);
@@ -21,7 +15,7 @@ export const SwiperCarousel = () => {
 	};
 
 	const options = {
-		modules: [EffectCoverflow, Pagination, Navigation, Autoplay, FreeMode],
+		modules: [EffectCoverflow, Pagination, Navigation, Autoplay],
 		effect: "coverflow",
 		spaceBetween: 30,
 		grabCursor: true,
@@ -46,8 +40,6 @@ export const SwiperCarousel = () => {
 		},
 		pagination: {
 			type: "fraction"
-			// dynamicBullets: true,
-			// clickable: true,
 		},
 		navigation: {
 			nextEl: ".swiper-button-next",
@@ -59,7 +51,6 @@ export const SwiperCarousel = () => {
 			delay: 2500,
 			disableOnInteraction: false
 		},
-		// freeMode: true,
 		onAutoplayTimeLeft: onAutoplayTimeLeft
 	};
 
@@ -159,6 +150,7 @@ export const SwiperCarousel = () => {
 					<span ref={progressContent}></span>
 				</div>
 			</Swiper>
+			<div></div>
 			<div className="slider-controller">
 				<div className="swiper-button-prev button">prev</div>
 				<div className="swiper-button-next button">next</div>

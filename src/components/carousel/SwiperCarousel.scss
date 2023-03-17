@@ -40,6 +40,17 @@
 		}
 	}
 
+	.swiper-pagination {
+		position: relative;
+		font-size: 16px;
+		font-weight: 600;
+
+		span{
+			font-size: 24px;
+			color: #5A5DD6;
+		}
+	}
+
 	.autoPlay-progress {
 		position: absolute;
 		right: 16px;
@@ -77,11 +88,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	$bottom: 43px;
+	bottom: $bottom;
 
-	$bottom: 0px;
+	z-index: 5;
 
 	.button {
-		margin: 0 20px;
+		position: relative;
+		margin: 0 40px;
 		padding: 10px 20px;
 		background: #646cff;
 		border-radius: 20px;
