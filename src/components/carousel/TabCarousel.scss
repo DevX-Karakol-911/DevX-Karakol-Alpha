@@ -1,6 +1,6 @@
 :root {
 	// todo light
-	--carousel-bg-button-light: #FFFFFF;
+	--carousel-bg-button-light: #ffffff;
 	--carousel-inside-bg-button-light: #ebebeb;
 	--carousel-text-light: #000000;
 	--carousel-box-shadow-light: rgba(0, 0, 0, 0.18);
@@ -318,21 +318,25 @@
 				height: 160px;
 			}
 		}
-
-		@media (max-width: 650px) {
-			transform: scale(0.8);
-		}
-		@media (max-width: 525px) {
-			transform: scale(0.7);
-		}
-		@media (max-width: 455px) {
-			transform: scale(0.6);
-		}
-		@media (max-width: 390px) {
-			transform: scale(0.59);
-		}
-		@media (max-width: 370px) {
-			transform: scale(0.56);
-		}
+	}
+	@media (max-width: 650px) {
+		height: 380px;
+		transform: scale(0.8);
+	}
+	@media (max-width: 525px) {
+		height: 330px;
+		transform: scale(0.7);
+	}
+	@media (max-width: 455px) {
+		height: 300px;
+		transform: scale(0.6);
+	}
+	@media (max-width: 390px) {
+		height: 270px;
+		transform: scale(0.59);
+	}
+	@media (max-width: 370px) {
+		height: 250px;
+		transform: scale(0.56);
 	}
 }
