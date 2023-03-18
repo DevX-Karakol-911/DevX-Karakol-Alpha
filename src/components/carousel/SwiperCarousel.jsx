@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -9,7 +9,7 @@ import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 import pic from "./img-slider/Elcho911.webp";
 
 export const SwiperCarousel = () => {
-	const swiperRef = useRef(null);
+	const [swiper, setSwiper] = useState(null);
 	const progressCircle = useRef(null);
 	const progressContent = useRef(null);
 	const onAutoplayTimeLeft = (s, time, progress) => {
@@ -49,7 +49,7 @@ export const SwiperCarousel = () => {
 			prevEl: ".swiper-button-prev",
 			clickable: true
 		},
-		// loop: true,
+		loop: true,
 		autoplay: {
 			delay: 2500,
 			disableOnInteraction: false
@@ -156,17 +156,15 @@ export const SwiperCarousel = () => {
 		}
 	];
 
-	const handleImageClick = (index) => {
-		swiperRef.current.swiper.slideTo(index);
-	};
+	const slideTo = (index) => swiper.slideTo(index);
 
 	return (
 		<>
-			<Swiper {...options} className="my-slide" ref={swiperRef}>
+			<Swiper {...options} onSwiper={setSwiper}>
 				{slides.map((slide, index) => (
 					<SwiperSlide key={slide.id}>
 						<div className="card">
-							<img src={slide.imgSrc} onClick={() => handleImageClick(index)} />
+							<img src={slide.imgSrc} />
 							<div className="about__people">
 								<h2>{slide.name}</h2>
 								<p>{slide.position}</p>
